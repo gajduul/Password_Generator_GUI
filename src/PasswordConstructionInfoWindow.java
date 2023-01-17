@@ -1,7 +1,10 @@
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.geom.Rectangle2D;
+import java.awt.geom.RoundRectangle2D;
 
 public class PasswordConstructionInfoWindow extends JFrame implements ActionListener {
     JButton closeWindowButton;
@@ -16,6 +19,9 @@ public class PasswordConstructionInfoWindow extends JFrame implements ActionList
         setResizable(false);
         setVisible(true);
         setLayout(null);
+        setLocationRelativeTo(null);
+        getContentPane().setBackground(Color.CYAN);
+
 
 
         JLabel mainStringLabel = new JLabel("Password Generator");
@@ -35,6 +41,7 @@ public class PasswordConstructionInfoWindow extends JFrame implements ActionList
 
         closeWindowButton = new JButton("Close Window");
         closeWindowButton.setBounds(120, 220, 130, 30);
+        closeWindowButton.setBackground(Color.white);
         add(closeWindowButton);
         closeWindowButton.addActionListener(this);
     }
@@ -46,4 +53,5 @@ public class PasswordConstructionInfoWindow extends JFrame implements ActionList
             this.dispose();
 
     }
+
 }

@@ -9,32 +9,39 @@ public class MenuWindow extends JFrame implements ActionListener {
 
     public MenuWindow() {
 
-        setSize(700, 400);
+        setSize(400, 300);
         setTitle("Password Generator");
         setResizable(false);
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(null);
+        setLocationRelativeTo(null);
+        getContentPane().setBackground(Color.CYAN);
+
+
 
 
         JLabel mainStringLabel = new JLabel("Password Generator");
-        mainStringLabel.setBounds(90, 30, 500, 100);
-        Font font = new Font("Arial", Font.BOLD, 50);
+        mainStringLabel.setBounds(45, 10, 300, 30);
+        Font font = new Font("Arial", Font.BOLD, 30);
         mainStringLabel.setFont(font);
         add(mainStringLabel);
 
 
         generatePasswordButton = new JButton("Generate Password");
-        generatePasswordButton.setBounds(35, 150, 300, 100);
+        generatePasswordButton.setBounds(115, 60, 150, 50);
+        generatePasswordButton.setBackground(Color.white);
         add(generatePasswordButton);
 
-        passwordConstructionButton = new JButton("Password Construction Info");
-        passwordConstructionButton.setBounds(345, 150, 300, 100);
+        passwordConstructionButton = new JButton("Password Construction");
+        passwordConstructionButton.setBounds(95, 120, 190, 50);
+        passwordConstructionButton.setBackground(Color.white);
         add(passwordConstructionButton);
 
 
         exitButton = new JButton("Exit");
-        exitButton.setBounds(90, 270, 500, 80);
+        exitButton.setBounds(90, 180, 200, 50);
+        exitButton.setBackground(Color.white);
         add(exitButton);
 
         generatePasswordButton.addActionListener(this);

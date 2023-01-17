@@ -12,12 +12,16 @@ public class GeneratedPasswordWindow extends JFrame implements ActionListener {
     Font secondStringFont = new Font("Arial", Font.PLAIN, 20);
 
     public GeneratedPasswordWindow() {
+        ImageIcon icon = new ImageIcon("D:\\PROJEKTY_JAVA\\Password_Generator_GUI\\images\\button image");
+
+
         setSize(400, 300);
         setTitle("Password Generator");
         setResizable(false);
         setVisible(true);
         setLayout(null);
-
+        setLocationRelativeTo(null);
+        getContentPane().setBackground(Color.CYAN);
 
         JLabel mainStringLabel = new JLabel("Password Generator");
         mainStringLabel.setBounds(45, 15, 500, 50);
@@ -37,15 +41,17 @@ public class GeneratedPasswordWindow extends JFrame implements ActionListener {
 
         copygeneratedPasswordButton = new JButton("Copy Password");
         copygeneratedPasswordButton.setBounds(200, 160, 130, 30);
+        copygeneratedPasswordButton.setBackground(Color.white);
         add(copygeneratedPasswordButton);
 
         generatePasswordAgainButton = new JButton("Generate again");
         generatePasswordAgainButton.setBounds(50, 220, 130, 30);
-
+        generatePasswordAgainButton.setBackground(Color.white);
         add(generatePasswordAgainButton);
 
         closeWindowButton = new JButton("Close Window");
         closeWindowButton.setBounds(200, 220, 130, 30);
+        closeWindowButton.setBackground(Color.white);
         add(closeWindowButton);
 
         closeWindowButton.addActionListener(this);
